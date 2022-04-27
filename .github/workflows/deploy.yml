@@ -37,6 +37,7 @@ jobs:
 
       - name: Build
         run: |
+          npm i --force
           npm ci --legacy-peer-deps
           npm run build
           npm run export
