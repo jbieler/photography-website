@@ -192,7 +192,23 @@ export default function Home() {
         </TitledComponent>
       </main>
 
+<<<<<<< HEAD
       <Footer></Footer>
     </>
+=======
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{" "}
+          <span className={styles.logo}>
+            <img src="vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
+    </div>
+>>>>>>> 1662de0f0500a0ec4cde5fdeceda85b75b46594c
   );
 }
