@@ -1,175 +1,198 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import LightboxGallery from "../components/lightboxGallery.js";
 import Navigation from "../components/navigation.js";
 import Contact from "../components/contact.js";
-import MyMapComponent from "../components/map.js";
-import Gallery from 'react-photo-gallery';
-import jsonp from 'jsonp';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { CookieBanner } from '@palmabit/react-cookie-law';
+import Offer from "../components/offer.js";
+import TitledComponent from '../components/TitledComponent.js';
+import Footer from '../components/footer.js';
+import { Container, Row, Col } from "react-bootstrap";
 
- const photos = [
+
+const photos = [
   {
-    src: "https://source.unsplash.com/2ShvY8Lf6l0/1600x1200",
-    srcSet: [
-      "https://source.unsplash.com/2ShvY8Lf6l0/500x375 500w",
-      "https://source.unsplash.com/2ShvY8Lf6l0/800x600 800w",
-      "https://source.unsplash.com/2ShvY8Lf6l0/1024x768 1024w",
-      "https://source.unsplash.com/2ShvY8Lf6l0/1600x1200 1600w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 4,
+    src: "gallery-large/img-0.jpeg",
+    width: 2,
     height: 3
   },
   {
-    src: "https://source.unsplash.com/Dm-qxdynoEc/1600x1600",
-    srcSet: [
-      "https://source.unsplash.com/Dm-qxdynoEc/500x500 500w",
-      "https://source.unsplash.com/Dm-qxdynoEc/800x800 800w",
-      "https://source.unsplash.com/Dm-qxdynoEc/1024x1024 1024w",
-      "https://source.unsplash.com/Dm-qxdynoEc/1600x1600 1600w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
+    src: "gallery-large/img-1.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-2.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-3.jpeg",
+    width: 2,
+    height: 3
+  },
+  {
+    src: "gallery-large/img-4.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-5.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-6.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-7.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-18.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-19.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-20.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-21.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-22.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-23.jpeg",
+    width: 2,
+    height: 3
+  },
+  {
+    src: "gallery-large/img-9.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-26.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-27.jpeg",
+    width: 2,
+    height: 3
+  },
+  {
+    src: "gallery-large/img-13.jpeg",
     width: 1,
     height: 1
   },
   {
-    src: "https://source.unsplash.com/qDkso9nvCg0/1200x1600",
-    srcSet: [
-      "https://source.unsplash.com/qDkso9nvCg0/375x500 375w",
-      "https://source.unsplash.com/qDkso9nvCg0/600x800 600w",
-      "https://source.unsplash.com/qDkso9nvCg0/768x1024 768w",
-      "https://source.unsplash.com/qDkso9nvCg0/1200x1600 1200w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 3,
-    height: 4
+    src: "gallery-large/img-10.jpeg",
+    width: 1,
+    height: 1
   },
   {
-    src: "https://source.unsplash.com/iecJiKe_RNg/1200x1600",
-    srcSet: [
-      "https://source.unsplash.com/iecJiKe_RNg/375x500 375w",
-      "https://source.unsplash.com/iecJiKe_RNg/600x800 600w",
-      "https://source.unsplash.com/iecJiKe_RNg/768x1024 768w",
-      "https://source.unsplash.com/iecJiKe_RNg/1200x1600 1200w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 3,
-    height: 4
+    src: "gallery-large/img-11.jpeg",
+    width: 1,
+    height: 1
+  },
+
+  {
+    src: "gallery-large/img-12.jpeg",
+    width: 1,
+    height: 1
   },
   {
-    src: "https://source.unsplash.com/epcsn8Ed8kY/1200x1600",
-    srcSet: [
-      "https://source.unsplash.com/epcsn8Ed8kY/375x500 375w",
-      "https://source.unsplash.com/epcsn8Ed8kY/600x800 600w",
-      "https://source.unsplash.com/epcsn8Ed8kY/768x1024 768w",
-      "https://source.unsplash.com/epcsn8Ed8kY/1200x1600 1200w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
+    src: "gallery-large/img-8.jpeg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/1600x1200",
-    srcSet: [
-      "https://source.unsplash.com/NQSWvyVRIJk/500x375 500w",
-      "https://source.unsplash.com/NQSWvyVRIJk/800x600 800w",
-      "https://source.unsplash.com/NQSWvyVRIJk/1024x768 1024w",
-      "https://source.unsplash.com/NQSWvyVRIJk/1600x1200 1600w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 4,
+    src: "gallery-large/img-14.jpeg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "gallery-large/img-15.jpeg",
+    width: 2,
     height: 3
   },
   {
-    src: "https://source.unsplash.com/zh7GEuORbUw/1200x1600",
-    srcSet: [
-      "https://source.unsplash.com/zh7GEuORbUw/375x500 375w",
-      "https://source.unsplash.com/zh7GEuORbUw/600x800 600w",
-      "https://source.unsplash.com/zh7GEuORbUw/768x1024 768w",
-      "https://source.unsplash.com/zh7GEuORbUw/1200x1600 1200w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
+    src: "gallery-large/img-16.jpeg",
+    width: 4,
+    height: 5
+  },
+  {
+    src: "gallery-large/img-17.jpeg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src: "https://source.unsplash.com/PpOHJezOalU/1600x1200",
-    srcSet: [
-      "https://source.unsplash.com/PpOHJezOalU/500x375 500w",
-      "https://source.unsplash.com/PpOHJezOalU/800x600 800w",
-      "https://source.unsplash.com/PpOHJezOalU/1024x768 1024w",
-      "https://source.unsplash.com/PpOHJezOalU/1600x1200 1600w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 4,
-    height: 3
+    src: "gallery-large/img-24.jpeg",
+    width: 3,
+    height: 2
   },
   {
-    src: "https://source.unsplash.com/I1ASdgphUH4/1600x1200",
-    srcSet: [
-      "https://source.unsplash.com/I1ASdgphUH4/500x375 500w",
-      "https://source.unsplash.com/I1ASdgphUH4/800x600 800w",
-      "https://source.unsplash.com/I1ASdgphUH4/1024x768 1024w",
-      "https://source.unsplash.com/I1ASdgphUH4/1600x1200 1600w"
-    ],
-    sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
-    width: 4,
-    height: 3
+    src: "gallery-large/img-25.jpeg",
+    width: 1,
+    height: 1
   }
+
 ];
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
+    <>
 
+      <Head>
+        <title>Jochen Bieler Fotografie - Inhaber Jochen Ohlenroth</title>
+        <meta name="description" content="Jochen Bieler Fotografie - Dein Fotograf in Berlin und Brandenburg" />
+        <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&weight=400" rel="stylesheet" />
       </Head>
 
-      <main className={styles.main}>
+      <Navigation />
 
-
-
-
-
-        <Navigation />
-
-        Shootings
-
-        <LightboxGallery photos={photos} />
-
-        about me
-
-
-
-        <MyMapComponent
-          isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-        />
-
- <Contact />
-
+      <main>
+        <TitledComponent title="Über mich" anchorId="ueber-mich">
+          <Container>
+          <Row className="justify-content-center">
+    <Col lg={10} xl={10} xxl={10} className="mb-4">Hi, mein Name ist Jochen. Ich bin verheiratet, Vater von 2 Kindern und lebe im der Nähe von Berlin. Ich fotografiere gern alles um mich herum und das aus Leidenschaft. 
+            Ich begleite Hochzeiten, fotografiere Babybäuche und führe Babyshootings durch. </Col>
+            </Row>
+            </Container>
+            
+        </TitledComponent>
+        <TitledComponent title="Angebot" anchorId="angebot">
+          <Offer/>
+        </TitledComponent>
+        <TitledComponent title="Portfolio" anchorId="portfolio">
+          <LightboxGallery photos={photos} />
+        </TitledComponent>
+        <TitledComponent title="Kontakt" anchorId="kontakt">
+          <Container>
+          <Row className="justify-content-center">
+    <Col lg={6} xl={6} xxl={6} className="mb-4">Schreiben Sie mir Ihre Vorstellungen und Wünsche. Ich werde mich dann umgehend mit einem auf Sie zugeschnittenen Angebot bei Ihnen melden.</Col>
+            </Row>
+            </Container>
+          <Contact />
+        </TitledComponent>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+      <Footer></Footer>
+    </>
   );
 }

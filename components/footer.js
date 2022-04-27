@@ -1,0 +1,21 @@
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import {BsInstagram} from 'react-icons/bs';
+
+function Footer() {
+  return (
+    <>
+    
+      <Nav bg="dark" className="justify-content-center bg-dark">
+      <Nav.Link className="link-light" href="/">Home</Nav.Link>
+      <Nav.Link className="link-light" href="/impressum.html">Impressum</Nav.Link>
+      <Nav.Link className="link-light" href="/datenschutz.html">Datenschutz</Nav.Link>
+      <Nav.Link className="link-light" href="//www.instagram.com/jochenbielerphotography"><BsInstagram/></Nav.Link>
+    </Nav>
+    </>
+  );
+}
+
+export default Footer;
