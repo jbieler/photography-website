@@ -12,11 +12,16 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    document.getElementById('submitButton').innerHTML = "Sende Nachricht...";
+    document.getElementById('submitButton').setAttribute("disabled", true);
+
     emailjs.sendForm('service_gbkv31e', 'template_xg1mj8s', form.current, 'user_dPJNJKPhpcL3pBcy5AMhD')
       .then((result) => {
-          console.log(result.text);
+          document.getElementById('submitButton').style="background-color: #C1DEB4; color: #000;";
+          document.getElementById('submitButton').innerHTML = "Nachricht erfolgreich gesendet";
       }, (error) => {
-          console.log(error.text);
+          document.getElementById('submitButton').style="background-color: #FF6960; color: #000;";
+          document.getElementById('submitButton').innerHTML = "Es ist ein Fehler aufgetreten - Bitte später erneut versuchen";
       });
   };
 
@@ -32,7 +37,7 @@ function Contact() {
             </div>
           </div>
           <Form.Control size="lg" className="mb-3" as="textarea" rows="5" placeholder="Deine Nachricht" />
-          <Button size="lg" type="submit" variant="outline-primary">Absenden</Button>
+          <Button size="lg" type="submit" id="submitButton" variant="outline-primary">Absenden</Button>
         </Form>
   );
 };
