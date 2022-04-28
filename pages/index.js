@@ -5,7 +5,6 @@ import Contact from "../components/contact.js";
 import Offer from "../components/offer.js";
 import TitledComponent from '../components/TitledComponent.js';
 import Footer from '../components/footer.js';
-import { Container, Row, Col } from "react-bootstrap";
 
 
 const photos = [

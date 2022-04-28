@@ -9,9 +9,9 @@ function Footer() {
     <>
     
       <Nav bg="dark" className="justify-content-center bg-dark">
-      <Nav.Link className="link-light" href="impressum.html">Impressum</Nav.Link>
-      <Nav.Link className="link-light" href="datenschutz.html">Datenschutz</Nav.Link>
-      <Nav.Link className="link-light" href="//www.instagram.com/jochenbielerphotography"><BsInstagram/></Nav.Link>
+      <Nav.Link className="link-light" target={"_blank"} href="impressum.html">Impressum</Nav.Link>
+      <Nav.Link className="link-light" target={"_blank"} href="datenschutz.html">Datenschutz</Nav.Link>
+      <Nav.Link className="link-light" target={"_blank"} href="//www.instagram.com/jochenbielerphotography"><BsInstagram/></Nav.Link>
     </Nav>
     </>
   );
