@@ -24,16 +24,16 @@ function Contact() {
 
   return (
         <Form ref={form} onSubmit={sendEmail}>
-          <Form.Control size="lg" className="mb-3" type="text" placeholder="Dein Name" name="from_name" />
+          <Form.Control size="lg" className="mb-3" type="text" placeholder="Dein Name" name="from_name" required />
           <div class="row g-3">
             <div class="col">
               <Form.Control size="lg" className="mb-3" type="text" placeholder="Deine Telefonnummer" name="from_phone_number" />
             </div>
             <div class="col">
-            <Form.Control size="lg" className="mb-3" type="email" placeholder="Deine E-mail Adresse" name="from_email" />
+            <Form.Control size="lg" className="mb-3" type="email" placeholder="Deine E-mail Adresse" name="from_email" required />
             </div>
           </div>
-          <Form.Control size="lg" className="mb-3" as="textarea" rows="5" placeholder="Deine Nachricht" />
+          <Form.Control size="lg" className="mb-3" as="textarea" rows="5" placeholder="Deine Nachricht" required />
           <Button size="lg" type="submit" id="submitButton" variant="outline-primary">Absenden</Button>
         </Form>
   );

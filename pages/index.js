@@ -5,6 +5,14 @@ import Contact from "../components/contact.js";
 import Offer from "../components/offer.js";
 import TitledComponent from '../components/TitledComponent.js';
 import Footer from '../components/footer.js';
+import AboutMe from '../components/aboutme.js';
+
+
+// TODO
+// Favicon tauschen
+// Text Familienzuwachs ändern
+// Abstand kontakt vs about me auf mobile gleich machen
+// Stack benutzen https://react-bootstrap.netlify.app/layout/stack/
 
 
 const photos = [
@@ -108,19 +116,13 @@ const photos = [
     width: 1,
     height: 1
   },
-
   {
-    src: "gallery-large/img-12.jpeg",
-    width: 1,
-    height: 1
-  },
-  {
-    src: "gallery-large/img-8.jpeg",
+    src: "gallery-large/img-14.jpeg",
     width: 3,
     height: 2
   },
   {
-    src: "gallery-large/img-14.jpeg",
+    src: "gallery-large/img-8.jpeg",
     width: 3,
     height: 2
   },
@@ -135,19 +137,14 @@ const photos = [
     height: 5
   },
   {
-    src: "gallery-large/img-17.jpeg",
-    width: 3,
-    height: 2
-  },
-  {
     src: "gallery-large/img-24.jpeg",
     width: 3,
     height: 2
   },
   {
-    src: "gallery-large/img-25.jpeg",
-    width: 1,
-    height: 1
+    src: "gallery-large/img-17.jpeg",
+    width: 3,
+    height: 2
   }
 
 ];
@@ -166,20 +163,18 @@ export default function Home() {
       <Navigation />
 
       <main>
-        <TitledComponent title="Über mich" anchorId="ueber-mich">
-          <div className="justify-content-center">Hi, mein Name ist Jochen. Ich bin verheiratet, Vater von 2 Kindern und lebe im der Nähe von Berlin. Ich fotografiere gern alles um mich herum und das aus Leidenschaft. 
-            Ich begleite Hochzeiten, fotografiere Babybäuche und führe Babyshootings durch. 
-            </div>
-        </TitledComponent>
         <TitledComponent title="Angebot" anchorId="angebot">
           <Offer/>
         </TitledComponent>
         <TitledComponent title="Portfolio" anchorId="portfolio">
           <LightboxGallery photos={photos} />
         </TitledComponent>
+        <TitledComponent title="Über mich" anchorId="ueber-mich">
+          <AboutMe></AboutMe>
+        </TitledComponent>
         <TitledComponent title="Kontakt" anchorId="kontakt">
-        <div className="justify-content-center">
-          Schreiben Sie mir Ihre Vorstellungen und Wünsche. Ich werde mich dann umgehend mit einem auf Sie zugeschnittenen Angebot bei Ihnen melden.
+        <div className="justify-content-center pb-3">
+        Ich freue mich von dir zu hören. Schreib mir gerne deine Vorstellungen und Wünsche. Ich werde mich zeitnah bei dir mit einem individuellen Angebot melden. 
         </div>
         <Contact />
         </TitledComponent>

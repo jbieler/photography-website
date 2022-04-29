@@ -17,7 +17,7 @@ function Offer() {
                 <Card.Subtitle><GiDiamondRing color="#B2954E" size="3em"/></Card.Subtitle>
                 <Card.Title className="my-3" as="h4">Hochzeit</Card.Title>
                 <Card.Text className="font-weight-bold font-italic">
-                  Fotografische Begleitung Ihrer Hochzeit, damit Sie Ihren schönsten Tag immer wieder erleben können.
+                Ich begleite eure Hochzeit ganz nach euren Wünschen und Vorstellungen und fange dabei die schönsten Momente und Emotionen fotografisch ein.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -26,7 +26,7 @@ function Offer() {
                 <Card.Subtitle><FaBaby color="#B2954E" size="3em"/></Card.Subtitle>
                 <Card.Title className="my-3" as="h4">Babies & Bellys</Card.Title>
                 <Card.Text>
-                  Halten Sie mit einem Babybauch oder Babyshooting diese besondere Zeit für immer fest.
+                Individuell angepasst an deine Vorstellungen halte ich im letzten Drittel deiner Schwangerschaft deinen Babybauch fotografisch fest. Euren neuen Familienzuwachs fotografiere ich gern bei euch in vertrauter Atmosphäre. Auch das kann in Form eines Einzel-, Familien- oder Geschwistershootings stattfinden.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -35,7 +35,7 @@ function Offer() {
                 <Card.Subtitle><FaPortrait color="#B2954E" size="3em"/></Card.Subtitle>
                 <Card.Title className="my-3" as="h4">Portrait</Card.Title>
                 <Card.Text>
-                  Maßgeschneiderte Portraitfotos nach Ihren Vorstellungen.
+                Maßgeschneidert nach deinen Wünschen mache ich ausdrucksstarke Studioportraits, ob als Beautyportraits, Fotos deiner Familie oder Businessportraits. 
                 </Card.Text>
               </Card.Body>
             </Card>
