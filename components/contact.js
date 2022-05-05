@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { Col, Row } from 'react-bootstrap';
 
 function Contact() {
   const form = useRef();
@@ -24,18 +25,26 @@ function Contact() {
 
   return (
         <Form ref={form} onSubmit={sendEmail}>
-          <Form.Control size="lg" className="mb-3" type="text" placeholder="Dein Name" name="from_name" required />
-          <div class="row g-3">
-            <div class="col">
-              <Form.Control size="lg" className="mb-3" type="text" placeholder="Deine Telefonnummer" name="from_phone_number" />
-            </div>
-            <div class="col">
-            <Form.Control size="lg" className="mb-3" type="email" placeholder="Deine E-mail Adresse" name="from_email" required />
-            </div>
+          <div className="justify-content-center pb-3">
+          Ich freue mich von dir zu hören. Schreib mir gerne deine Vorstellungen und Wünsche. Ich werde mich zeitnah bei dir mit einem individuellen Angebot melden.
           </div>
+          
+          <Form.Control size="lg" className="mb-3" type="text" placeholder="Dein Name" name="from_name" required />
+          
+          <Row>
+            <Col xs={12} s={6} m={6} l={6} xl={6} xxl={6}>
+              <Form.Control size="lg" className="mb-3" type="text" placeholder="Deine Telefonnummer" name="from_phone_number" />
+            </Col>
+            <Col xs={12} s={6} m={6} l={6} xl={6} xxl={6}>
+              <Form.Control size="lg" className="mb-3" type="email" placeholder="Deine E-mail Adresse" name="from_email" required />
+            </Col>
+          </Row>
           <Form.Control size="lg" className="mb-3" as="textarea" rows="5" placeholder="Deine Nachricht" required />
           <Button size="lg" type="submit" id="submitButton" variant="outline-primary">Absenden</Button>
+          
         </Form>
+
+        
   );
 };
 

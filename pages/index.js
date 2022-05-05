@@ -6,14 +6,7 @@ import Offer from "../components/offer.js";
 import TitledComponent from '../components/TitledComponent.js';
 import Footer from '../components/footer.js';
 import AboutMe from '../components/aboutme.js';
-
-
-// TODO
-// Favicon tauschen
-// Text Familienzuwachs ändern
-// Abstand kontakt vs about me auf mobile gleich machen
-// Stack benutzen https://react-bootstrap.netlify.app/layout/stack/
-
+import Stack from 'react-bootstrap/Stack';
 
 const photos = [
   {
@@ -164,21 +157,26 @@ export default function Home() {
       <Navigation />
 
       <main>
+
+      <Stack gap={5} >
+
         <TitledComponent title="" anchorId="portfolio">
           <LightboxGallery photos={photos} />
         </TitledComponent>
+
         <TitledComponent title="Angebot" anchorId="angebot">
           <Offer/>
         </TitledComponent>
+
         <TitledComponent title="Über mich" anchorId="ueber-mich">
-          <AboutMe></AboutMe>
+          <AboutMe/>
         </TitledComponent>
+
         <TitledComponent title="Kontakt" anchorId="kontakt">
-        <div className="justify-content-center pb-3">
-        Ich freue mich von dir zu hören. Schreib mir gerne deine Vorstellungen und Wünsche. Ich werde mich zeitnah bei dir mit einem individuellen Angebot melden. 
-        </div>
-        <Contact />
+          <Contact />
         </TitledComponent>
+
+      </Stack>
       </main>
       
       <Footer></Footer>

@@ -1,13 +1,9 @@
 
-import React, { useRef } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { GiDiamondRing } from 'react-icons/gi';
 import { FaBaby , FaPortrait} from 'react-icons/fa';
-import {VscPerson} from 'react-icons/vsc';
 
 function Offer() {
     return (
@@ -26,7 +22,7 @@ function Offer() {
                 <Card.Subtitle><FaBaby color="#B2954E" size="3em"/></Card.Subtitle>
                 <Card.Title className="my-3" as="h4">Babies & Bellys</Card.Title>
                 <Card.Text>
-                Individuell angepasst an deine Vorstellungen halte ich im letzten Drittel deiner Schwangerschaft deinen Babybauch fotografisch fest. Euren neuen Familienzuwachs fotografiere ich gern bei euch in vertrauter Atmosphäre. Auch das kann in Form eines Einzel-, Familien- oder Geschwistershootings stattfinden.
+                Individuell angepasst an deine Vorstellungen halte ich im letzten Drittel deiner Schwangerschaft deinen Babybauch fotografisch fest. Euren neuen Familienzuwachs fotografiere ich gern bei euch in vertrauter Atmosphäre in Form eines Einzel-, Familien- oder Geschwistershootings.
                 </Card.Text>
               </Card.Body>
             </Card>
