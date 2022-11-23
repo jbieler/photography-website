@@ -151,7 +151,6 @@ export default function Home() {
         <meta name="description" content="Jochen Bieler Fotografie - Dein Fotograf in Berlin und Brandenburg" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&weight=400" rel="stylesheet" />
       </Head>
 
       <Navigation />
@@ -178,7 +177,7 @@ export default function Home() {
 
       </Stack>
       </main>
-      
+
       <Footer></Footer>
     </>
   );
