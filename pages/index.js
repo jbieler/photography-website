@@ -142,6 +142,10 @@ const photos = [
 
 ];
 
+import { Montserrat } from '@next/font/google'
+
+const inter = Montserrat({ subsets: ['latin'] });
+
 export default function Home() {
   return (
     <>
@@ -155,7 +159,7 @@ export default function Home() {
 
       <Navigation />
 
-      <main>
+      <main className={inter.className}>
 
       <Stack gap={5} >
 
